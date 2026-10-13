@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-baby-pink: #fce4ec;
+  --color-baby-pink-strong: #f06292;
+  --color-baby-blue: #e1f5fe;
+  --color-baby-blue-strong: #0288d1;
+  --color-accent-pink: #f8bbd0;
+  --color-accent-blue: #b3e5fc;
+}
+
+:root {
+  color-scheme: light;
+  background-color: #fce4ec;
+  color: #0288d1;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #f06292;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #0288d1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #e1f5fe;
+  color: #0288d1;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #f06292;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto #b3e5fc;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #01579b;
+    background-color: #fce4ec;
+  }
+  a:hover {
+    color: #f06292;
+  }
+  button {
+    background-color: #e1f5fe;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #0288d1;
+    --text-h: #01579b;
+    --bg: #fce4ec;
+    --border: #b3e5fc;
+    --code-bg: #e1f5fe;
+    --accent: #f06292;
+    --accent-bg: rgba(240, 98, 146, 0.15);
+    --accent-border: rgba(240, 98, 146, 0.5);
+    --social-bg: rgba(179, 229, 252, 0.5);
+    --shadow:
+      rgba(240, 98, 146, 0.2) 0 10px 15px -3px,
+      rgba(240, 98, 146, 0.1) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: none;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
